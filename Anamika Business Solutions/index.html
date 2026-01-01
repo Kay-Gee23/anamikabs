@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="refresh" content="0; url='index.html'">
+  <title>Anamika Business Solutions</title>
+</head>
+<body>
+  If you are not redirected automatically, <a href="index.html">click here to open the site</a>.
+  <script>
+    // Open the terminal and navigate to the project directory
+    const { exec } = require('child_process');
+    exec('cd "C:\\Users\\Daphney\\Desktop\\Anamika Business Solutions" && npx serve .', (error, stdout, stderr) => {
+      if (error) {
+        console.error(`Error: ${error.message}`);
+        return;
+      }
+      if (stderr) {
+        console.error(`stderr: ${stderr}`);
+        return;
+      }
+      console.log(`stdout: ${stdout}`);
+    });
+  </script>
+</body>
+</html>

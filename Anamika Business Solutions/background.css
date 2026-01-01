@@ -1,0 +1,234 @@
+body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+header {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 3px solid #ff6600;
+    position: sticky;
+    top: 0;
+    z-index: 30;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ff6600;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    flex-wrap: wrap; /* allow wrapping on small screens */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 4px;
+}
+
+nav a.active, nav a:hover {
+    color: #ff6600;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url('https://images.unsplash.com/photo-1581090700227-1e37b190418e') no-repeat center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-attachment: scroll;
+    min-height: 420px;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 900px;
+    width: calc(100% - 40px);
+}
+
+.hero h1 {
+    color: #ff6600;
+    font-size: 2.5em;
+    margin: 0 0 12px 0;
+}
+
+.btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #e65c00;
+}
+
+/* CONTENT SECTIONS */
+.services, .about, .contact {
+    padding: 60px 10%;
+}
+
+h2, h3 {
+    color: #ff6600;
+}
+
+/* SERVICES GRID */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background: #1a1a1a;
+    border: 2px solid #ff6600;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* FORMS */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 700px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ff6600;
+    background-color: #0d0d0d;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 0 3px rgba(255,102,0,0.12);
+    border-color: #ff6600;
+}
+
+button[type="submit"], .btn {
+    width: auto;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 15px 0;
+    color: #ccc;
+    border-top: 2px solid #ff6600;
+}
+
+/* MOBILE / RESPONSIVE ADJUSTMENTS */
+@media (max-width: 900px) {
+    header {
+        padding: 12px 20px;
+    }
+    .logo {
+        font-size: 1.25em;
+    }
+    .hero {
+        height: 60vh;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+    .services, .about, .contact {
+        padding: 40px 7%;
+    }
+    form {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-end;
+        background: transparent;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .hero {
+        height: 50vh;
+        min-height: 360px;
+        background-position: center 30%;
+    }
+
+    .hero h1 {
+        font-size: 1.6em;
+    }
+    .hero-content {
+        padding: 20px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    input, textarea {
+        font-size: 16px;
+    }
+
+    button[type="submit"], .btn {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 420px) {
+    header {
+        padding: 10px 14px;
+    }
+    .logo {
+        font-size: 1.1em;
+    }
+    .hero {
+        height: 45vh;
+        min-height: 320px;
+    }
+    .hero h1 {
+        font-size: 1.35em;
+    }
+    .services, .about, .contact {
+        padding: 28px 5%;
+    }
+    nav ul {
+        align-items: flex-start;
+    }
+}
